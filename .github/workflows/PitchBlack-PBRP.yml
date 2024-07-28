@@ -144,8 +144,8 @@ jobs:
       with:
         files: | 
           workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
-          workspace/out/target/product/{{ env.DEVICE_NAME }}/PBRP*.zip
-          workspace/out/target/product/{{ env.DEVICE_NAME }}/ramdisk-recovery.*
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/PBRP*.zip
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/ramdisk-recovery.*
         name: PitchBlack-PBRP ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         body: |
